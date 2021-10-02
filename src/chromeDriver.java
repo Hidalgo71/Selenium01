@@ -1,12 +1,10 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class selDemo1
+public class chromeDriver
 {
     public static void main(String[] args)
     {
-        // Selenium Codes ?
-
         // Add .exe file
         System.setProperty("webdriver.chrome.driver", "D:\\Docs\\Drivers\\chromedriver.exe");
 
