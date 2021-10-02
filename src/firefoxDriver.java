@@ -16,6 +16,7 @@ public class firefoxDriver
         System.setProperty("webdriver.gecko.driver", "D:\\Docs\\Drivers\\geckodriver.exe");
         File pathBinary = new File("D:\\Program Files\\Mozilla Firefox\\firefox.exe");
 
+    /* If Firefox located different than default, we need to add this codes. */
         FirefoxBinary ffBinary = new FirefoxBinary(pathBinary);
         DesiredCapabilities desired = DesiredCapabilities.firefox();
         FirefoxOptions ffOptions = new FirefoxOptions();
