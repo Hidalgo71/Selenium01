@@ -23,7 +23,7 @@ public class chromeDriver
        // chDriver.close();                                             //It Closing current browser.
        // chDriver.quit() ;                                             //It Closing all browsers opened by Selenium.
 
-        chDriver.get("https://facebook.com");
+       chDriver.get("https://facebook.com");
        // chDriver.findElement(By.id("email"));                         //Goal is taking mail textbox by using id method. But we need to send characters in this textbox.
        // chDriver.findElement(By.id("email")).sendKeys("Hello World");  //.sendKeys method is used for sending input to email textbox.
        // chDriver.findElement(By.id("pass")).sendKeys("nesyek71");      //Password textbox
@@ -39,6 +39,7 @@ public class chromeDriver
 
        // chDriver.findElement(By.xpath("//*[@id=\"u_0_a_3j\"]/div[3]/a")).click();         //Forgot password changing xpath
         chDriver.findElement(By.cssSelector("._6ltj > a:nth-child(1)")).click();            //This ccs taken from Firefox, stable cssSelector
+
 
 
 
