@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,6 +10,16 @@ public class fbookXpath
         WebDriver fbDriver = new ChromeDriver();
         fbDriver.get("https://facebook.com");
 
+        fbDriver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("test.mail");
+        fbDriver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys("123");
+        fbDriver.findElement(By.cssSelector("#u_0_d_As")).click();
+
+        /*
+            driver.get("http://www.qaclickacademy.com/interview.php");
+            driver.findElement(By.xpath("//li[text()=' Selenium ']")).click();
+            driver.findElement(By.xpath("//ul[@class='responsive-tabs__list']/li[1]/following-sibling::li[2]")).click();
+            System.out.println(driver.findElement(By.xpath(".//*[@id='tablist1-tab2']/parent::ul")).getAttribute("role"));
+        */
 
     }
 }
