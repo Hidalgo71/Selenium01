@@ -26,12 +26,16 @@ public class firefoxDriver
         // Create Firefox object driver.
         WebDriver ffDriver = new FirefoxDriver(ffOptions);
 
-        ffDriver.get("https://login.salesforce.com");
+       /*
+       ffDriver.get("https://login.salesforce.com");
         ffDriver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("Hidalgo");
         ffDriver.findElement(By.cssSelector("#password")).sendKeys("123");
         ffDriver.findElement(By.xpath("//*[@id=\"Login\"]")).click();
 
         System.out.println(ffDriver.findElement(By.cssSelector("#error")).getText());
+        */
+        ffDriver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+        ffDriver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 
     }
 }
