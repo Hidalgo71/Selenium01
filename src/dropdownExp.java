@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class dropdownExp
 {
     public static void main(String[] args) throws InterruptedException
@@ -35,15 +37,32 @@ public class dropdownExp
         chDriver.findElement(By.xpath("//*[@id='btnclosepaxoption']")).click();
         */
 //=================================================
-        /* DYNAMIC DROPDOWN LIST DDL is empty list at the beginning because need to select something before list is becoming full. For exm city - state. 1st need to select city and then ddl full with this city's states.
-        */
+        /* DYNAMIC DROPDOWN LIST
+        *DDL is empty list at the beginning because need to select something before list is becoming full. For exm city - state. 1st need to select city and then ddl full with this city's states.
+
         ////div[@id='id'] //a[@value='val'] CODE SNIPPED
         //chDriver.findElement(By.id("ctl00_mainContent_ddl_originStation1")).click();                                              //This id for windowed size, if its half size ddlist changing to static dd list.
         chDriver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
         chDriver.findElement(By.xpath("//*[@id=\"dropdownGroup1\"]/div/ul[3]/li[8]/a")).click();                                    //1st select is done
         Thread.sleep(1000);
         chDriver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='JLR']")).click(); //Parent-child relationship example.
+        */
+//=================================================
+        /*//AUTO SUGGESTIVE DROPDOWN LIST
+        //*User type something in the list and dropdown list open and suggest related elements in the list
+        chDriver.findElement(By.xpath("//*[@id=\"autosuggest\"]")).sendKeys("ar");
+        Thread.sleep(1000);
 
+        List<WebElement> options = chDriver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+        for (WebElement option : options)
+        {
+            if(option.getText().equalsIgnoreCase("San Marino"))
+            {
+                option.click();
+                break;
+            }
+        }
+        //*/
 
 
 
