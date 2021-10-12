@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 
-public class firefoxDriver
+public class loginTestingFF
 {
     public static void main(String[] args)
     {

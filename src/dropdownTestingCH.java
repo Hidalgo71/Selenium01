@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class dropdownExp
+public class dropdownTestingCH
 {
     public static void main(String[] args) throws InterruptedException
     {
