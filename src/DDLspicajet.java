@@ -10,6 +10,7 @@ public class DDLspicajet
         WebDriver chDriver = new ChromeDriver();
         chDriver.get("https://beta.spicejet.com/");
 
+        //CASE: Testing FROM-TO dropdownlist
         chDriver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div[1]/div[3]/div[2]/div[3]/div/div[1]/div")).click();
         chDriver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div[1]/div[3]/div[2]/div[3]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[26]")).click();
         Thread.sleep(1000);

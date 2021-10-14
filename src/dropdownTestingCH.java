@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -25,20 +26,22 @@ public class dropdownTestingCH
         System.out.println(ddlist.getFirstSelectedOption().getText());
         */
 //=================================================
-        /* INTERACTIVE DROPDOWN LOST
+         /*//INTERACTIVE DROPDOWN LOST
+
         chDriver.findElement(By.xpath("//*[@id='divpaxinfo']")).click();                                          //Clicking Passenger ddlist, and opening list.
-        Thread.sleep(1000L);                                                                                      //This code allows the program pause. Because opening dropdown list is need time! With this code we are waiting list opening and executing continue.
+        Thread.sleep(1000L);                                                                                //This code allows the program pause. Because opening dropdown list is need time! With this code we are waiting list opening and executing continue.
 
         for(int i = 1; i < 3; i++)
         {
             chDriver.findElement(By.xpath("//*[@id='hrefIncAdt']")).click();                                          //In the menu clicking "+" button to add adults.
-            System.out.println(i + " kere basıldı");
         }
         chDriver.findElement(By.xpath("//*[@id='btnclosepaxoption']")).click();
-        */
+        Assert.assertEquals(chDriver.findElement(By.id("divpaxinfo")).getText(), "3 Adult");
+        System.out.println(chDriver.findElement(By.id("divpaxinfo")).getText());
+        //*/
 //=================================================
-        /* DYNAMIC DROPDOWN LIST
-        *DDL is empty list at the beginning because need to select something before list is becoming full. For exm city - state. 1st need to select city and then ddl full with this city's states.
+        /* //DYNAMIC DROPDOWN LIST
+        //DDL is empty list at the beginning because need to select something before list is becoming full. For exm city - state. 1st need to select city and then ddl full with this city's states.
 
         ////div[@id='id'] //a[@value='val'] CODE SNIPPED
         //chDriver.findElement(By.id("ctl00_mainContent_ddl_originStation1")).click();                                              //This id for windowed size, if its half size ddlist changing to static dd list.
