@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 
-public class chechboxTesting
+public class checkboxTesting
 {
     public static void main(String[] args)
     {
