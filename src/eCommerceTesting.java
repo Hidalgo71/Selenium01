@@ -12,7 +12,7 @@ public class eCommerceTesting
     {
         System.setProperty("webdriver.chrome.driver", "D:\\Docs\\Drivers\\chromedriver.exe");
         WebDriver chDriver = new ChromeDriver();
-        chDriver.get("https://www.cleartrip.com/");
+        chDriver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 
         String[] marketItems = new String[] {"Cucumber", "Brocolli"};                                                                               //If we want to add multiple items using array.
         //Case is Adding item to cart. But every addBTN are same. So we need to find item name to add to cart.
