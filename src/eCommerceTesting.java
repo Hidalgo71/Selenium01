@@ -27,7 +27,7 @@ public class eCommerceTesting
             {
                 j++;
                 chDriver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();                                            //click function inside the loop so don't need to fitn item's-add click button.
-                if (j == marketItemsList.length)
+                if (j == marketItems.length)
                 {
                     break;                                                                                                                          //We have a 3 element in the array but for loop iterates 30 times because of add button. To quit loop we add variable and count as array size.
                 }
