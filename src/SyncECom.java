@@ -17,17 +17,17 @@ public class SyncECom
         WebDriver chDriver = new ChromeDriver();
         chDriver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
         chDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);                                                                       //Implicit Wait
+        WebDriverWait expWait = new WebDriverWait(chDriver, 5);                                                                     //Explicit Wait
 
         String[] marketItems = new String[] {"Cucumber", "Brocolli", "Beetroot", "Carrot"};                                                        //If we want to add multiple items using array.
         addItems(chDriver, marketItems);
         chDriver.findElement(By.cssSelector("img[alt='Cart']")).click();
         chDriver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click();
+        expWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.promoCode")));
         chDriver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
         chDriver.findElement(By.cssSelector("button.promoBtn")).click();
-        WebDriverWait expWait = new WebDriverWait(chDriver, 5);
         expWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.promoInfo")));
         System.out.println(chDriver.findElement(By.cssSelector("span.promoInfo")).getText());
-
 
     }
 
