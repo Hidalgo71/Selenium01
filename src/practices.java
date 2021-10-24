@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,7 +20,7 @@ public class practices
         //chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");   //1
         //chDriver.get("https://www.cleartrip.com/");                           //2
         //chDriver.get("https://www.itgeared.com/demo/1506-ajax-loading.html"); //3
-        //chDriver.get("https://the-internet.herokuapp.com/");                  //4
+        chDriver.get("https://the-internet.herokuapp.com/");                  //4 - 5
 
 
         WebDriverWait expWait = new WebDriverWait(chDriver, 5);
@@ -67,6 +68,15 @@ public class practices
         System.out.println(chDriver.findElement(By.xpath("//h3[contains(text(),'New Window')]")).getText());
         chDriver.switchTo().window(parentId);
         System.out.println(chDriver.findElement(By.xpath("//h3[contains(text(),'Opening a new window')]")).getText());
+        //*/
+
+        ///*    //5
+        chDriver.findElement(By.xpath("//a[contains(text(),'Nested Frames')]")).click();
+        Actions dragAD = new Actions(chDriver);
+        System.out.println(chDriver.findElements(By.tagName("frameset")).size());
+        chDriver.switchTo().frame(chDriver.findElement(By.name("frame-top")));
+        chDriver.switchTo().frame(chDriver.findElement(By.name("frame-middle")));
+        System.out.println(chDriver.findElement(By.id("content")).getText());
         //*/
     }
 }
