@@ -7,15 +7,20 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class practices
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException
     {
         System.setProperty("webdriver.chrome.driver", "D:\\Docs\\Drivers\\chromedriver.exe");
         WebDriver chDriver = new ChromeDriver();
         //chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");   //1
         //chDriver.get("https://www.cleartrip.com/");                           //2
-        chDriver.get("https://www.itgeared.com/demo/1506-ajax-loading.html"); //3
+        //chDriver.get("https://www.itgeared.com/demo/1506-ajax-loading.html"); //3
+        //chDriver.get("https://the-internet.herokuapp.com/");                  //4
+
 
         WebDriverWait expWait = new WebDriverWait(chDriver, 5);
 
@@ -45,12 +50,23 @@ public class practices
         System.out.println(chDriver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[2]/div/div/div/span")).getText());
         //*/
 
-        ///* //3
+        /* //3
         chDriver.findElement(By.xpath("//a[contains(text(),'Click to load get data via Ajax!')]")).click();
         expWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("results")));
         System.out.println(chDriver.findElement(By.id("results")).getText());
-
-
          //*/
+
+        /* //4
+        chDriver.findElement(By.xpath("/html/body/div[2]/div/ul/li[33]/a")).click();
+        chDriver.findElement(By.xpath("//a[contains(text(),'Click Here')]")).click();
+        Set<String> windows = chDriver.getWindowHandles();
+        Iterator<String> iterWin = windows.iterator();
+        String parentId = iterWin.next();
+        String childId = iterWin.next();
+        chDriver.switchTo().window(childId);
+        System.out.println(chDriver.findElement(By.xpath("//h3[contains(text(),'New Window')]")).getText());
+        chDriver.switchTo().window(parentId);
+        System.out.println(chDriver.findElement(By.xpath("//h3[contains(text(),'Opening a new window')]")).getText());
+        //*/
     }
 }
