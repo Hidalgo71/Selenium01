@@ -82,7 +82,7 @@ public class practices
 
         ///*    //6
         chDriver.findElement(By.id("checkBoxOption3")).click();
-        String cbName = chDriver.findElement(By.xpath("//div[@id='checkbox-example']/fieldset/label[3]/input")).getText();
+        String cbName = chDriver.findElement(By.xpath("//div[@id='checkbox-example']/fieldset/label[3]")).getText();
         WebElement sttDDL = chDriver.findElement(By.id("dropdown-class-example"));
         Select ddList = new Select(sttDDL);
         ddList.selectByVisibleText(cbName);

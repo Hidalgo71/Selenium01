@@ -3,7 +3,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Mouse;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -39,7 +38,5 @@ public class scope
             chDriver.switchTo().window(iter.next());                                                                //Driver switching next tab. Use index.
             System.out.println(chDriver.getTitle());
         }
-
-
     }
 }
