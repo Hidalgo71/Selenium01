@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 public class practices
@@ -17,10 +18,10 @@ public class practices
     {
         System.setProperty("webdriver.chrome.driver", "D:\\Docs\\Drivers\\chromedriver.exe");
         WebDriver chDriver = new ChromeDriver();
-        //chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");   //1
+        chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");   //1 - 6
         //chDriver.get("https://www.cleartrip.com/");                           //2
         //chDriver.get("https://www.itgeared.com/demo/1506-ajax-loading.html"); //3
-        chDriver.get("https://the-internet.herokuapp.com/");                  //4 - 5
+        //chDriver.get("https://the-internet.herokuapp.com/");                  //4 - 5
 
 
         WebDriverWait expWait = new WebDriverWait(chDriver, 5);
@@ -70,7 +71,7 @@ public class practices
         System.out.println(chDriver.findElement(By.xpath("//h3[contains(text(),'Opening a new window')]")).getText());
         //*/
 
-        ///*    //5
+        /*    //5
         chDriver.findElement(By.xpath("//a[contains(text(),'Nested Frames')]")).click();
         Actions dragAD = new Actions(chDriver);
         System.out.println(chDriver.findElements(By.tagName("frameset")).size());
@@ -78,5 +79,31 @@ public class practices
         chDriver.switchTo().frame(chDriver.findElement(By.name("frame-middle")));
         System.out.println(chDriver.findElement(By.id("content")).getText());
         //*/
+
+        ///*    //6
+        chDriver.findElement(By.id("checkBoxOption3")).click();
+        String cbName = chDriver.findElement(By.xpath("//div[@id='checkbox-example']/fieldset/label[3]/input")).getText();
+        WebElement sttDDL = chDriver.findElement(By.id("dropdown-class-example"));
+        Select ddList = new Select(sttDDL);
+        ddList.selectByVisibleText(cbName);
+        chDriver.findElement(By.xpath("//input[@id='name']")).sendKeys(cbName);
+        chDriver.findElement(By.id("alertbtn")).click();
+        String javaPopup = chDriver.switchTo().alert().getText();
+        if (javaPopup.contains(cbName))
+        {
+            System.out.println("Test Passed");
+        }
+        else
+        {
+            System.out.println("Test Failed");
+        }
+
+
+        //*/
+
+
+
+
+
     }
 }

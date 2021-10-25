@@ -17,7 +17,7 @@ public class windowHandles
 
         chDriver.findElement(By.cssSelector("a[class='blinkingText']")).click();                                //Click method open new window. Child browser
         Set<String> windows = chDriver.getWindowHandles();                            //[parentId, childId]     //Get to the window handle IDs of all tabs by opened by automation
-        Iterator<String> iterWin = windows.iterator();                                                          //'iterWin' can extract the values in set collection
+        Iterator<String> iterWin = windows.iterator();                                                          //'iterWin' can extract the values in set collection, Helps to switch tabs
         String parentId = iterWin.next();                                                                       //Get the next index of set by default. Zeroth index is 'parentId'
         String childId = iterWin.next();                                                                        //first index
         chDriver.switchTo().window(childId);                                                                    //Switching to opened tab
