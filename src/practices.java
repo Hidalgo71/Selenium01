@@ -80,7 +80,7 @@ public class practices
         System.out.println(chDriver.findElement(By.id("content")).getText());
         //*/
 
-        ///*    //6
+        /*    //6
         chDriver.findElement(By.id("checkBoxOption3")).click();
         String cbName = chDriver.findElement(By.xpath("//div[@id='checkbox-example']/fieldset/label[3]")).getText();
         WebElement sttDDL = chDriver.findElement(By.id("dropdown-class-example"));
@@ -97,11 +97,11 @@ public class practices
         {
             System.out.println("Test Failed");
         }
-
-
         //*/
 
+        ///*    //7
 
+        //*/
 
 
 
