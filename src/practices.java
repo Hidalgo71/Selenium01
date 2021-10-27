@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +19,7 @@ public class practices
     {
         System.setProperty("webdriver.chrome.driver", "D:\\Docs\\Drivers\\chromedriver.exe");
         WebDriver chDriver = new ChromeDriver();
-        chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");   //1 - 6
+        chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");     //1 - 6
         //chDriver.get("https://www.cleartrip.com/");                           //2
         //chDriver.get("https://www.itgeared.com/demo/1506-ajax-loading.html"); //3
         //chDriver.get("https://the-internet.herokuapp.com/");                  //4 - 5
