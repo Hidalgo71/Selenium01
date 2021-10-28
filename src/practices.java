@@ -12,6 +12,7 @@ import org.testng.Assert;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class practices
 {
@@ -19,12 +20,12 @@ public class practices
     {
         System.setProperty("webdriver.chrome.driver", "D:\\Docs\\Drivers\\chromedriver.exe");
         WebDriver chDriver = new ChromeDriver();
-        chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");     //1 - 6
+        chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");     //1 - 6 - 7
         //chDriver.get("https://www.cleartrip.com/");                           //2
         //chDriver.get("https://www.itgeared.com/demo/1506-ajax-loading.html"); //3
         //chDriver.get("https://the-internet.herokuapp.com/");                  //4 - 5
 
-
+        chDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         WebDriverWait expWait = new WebDriverWait(chDriver, 5);
 
         /* //1
@@ -100,11 +101,22 @@ public class practices
         }
         //*/
 
-        ///*    //7
-
+        /*    //7
+        chDriver.findElement(By.id("autocomplete")).sendKeys("tur");
+        List<WebElement> options = chDriver.findElements(By.cssSelector(".ui-menu-item"));
+        for (WebElement option : options)
+        {
+            if (option.getText().equalsIgnoreCase("Turkey"))
+            {
+                option.click();
+                break;
+            }
+        }
+        System.out.println(chDriver.findElement(By.id("autocomplate")).getAttribute("value"));
         //*/
 
+        ///* //8
 
-
+        //*/
     }
 }

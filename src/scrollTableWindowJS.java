@@ -14,8 +14,8 @@ public class scrollTableWindowJS
         System.setProperty("webdriver.chrome.driver", "D:\\Docs\\Drivers\\chromedriver.exe");
         WebDriver chDriver = new ChromeDriver();
         chDriver.get("https://rahulshettyacademy.com/AutomationPractice/");
-        int sum = 0, total = 0;
-        int rowSize = 0;
+        int sum = 0, total;
+        int rowSize;
 
         JavascriptExecutor selJS = (JavascriptExecutor) chDriver;                                                         //Typecasting
         selJS.executeScript("window.scroll(0,500)");                                                                   ////Scroll down to page
