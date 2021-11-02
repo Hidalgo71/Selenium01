@@ -27,7 +27,7 @@ public class syncFluentW
             {
                 if (chDriver.findElement(By.cssSelector("[id = 'finish'] h4")).isDisplayed())
                 {
-                    return chDriver.findElement(By.cssSelector("[id = 'finish'] h4"));                                          //Wait until this element appear
+                    return chDriver.findElement(By.cssSelector("[id = 'finish'] h4"));                                      //Wait until this element appear
                 }
                 else
                     return null;
