@@ -37,7 +37,7 @@ public class webTableSorting
             vegPrice.forEach(System.out::println);                                                                          //Print price
             if (vegPrice.size() < 1)
             {
-                chDriver.findElement(By.cssSelector("[aria-label='Next']")).click();                                        //Click next button to find what we searching for
+                chDriver.findElement(By.cssSelector("[aria-label='Next']")).click();                                        //Click next button until find what we searching for
             }
         }
         while (vegPrice.size() < 1);
