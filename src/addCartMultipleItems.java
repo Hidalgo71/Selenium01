@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Arrays;
 import java.util.List;
 
-public class eCommerceTesting
+public class addCartMultipleItems
 {
     public static void main(String[] args) throws InterruptedException
     {

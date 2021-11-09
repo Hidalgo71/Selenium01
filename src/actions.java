@@ -14,6 +14,7 @@ public class actions
 {
     public static void main(String[] args)
     {
+
         System.setProperty("webdriver.gecko.driver", "D:\\Docs\\Drivers\\geckodriver.exe");
         File pathBinary = new File("D:\\Program Files\\Mozilla Firefox\\firefox.exe");
 
